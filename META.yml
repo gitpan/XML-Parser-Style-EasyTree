@@ -5,13 +5,13 @@ author:
 build_requires:
   Test::More: 0
   XML::Parser: 0
-  ex::lib: 0
+  ex::lib: 0.03
 distribution_type: module
-generated_by: 'Module::Install version 0.71'
+generated_by: 'Module::Install version 0.79'
 license: perl
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: XML-Parser-Style-EasyTree
 no_index:
   directory:
@@ -19,4 +19,6 @@ no_index:
     - t
 requires:
   Scalar::Util: 0
-version: 0.01
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.02
