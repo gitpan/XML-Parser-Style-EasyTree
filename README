@@ -1,12 +1,12 @@
 NAME
-    XML::Parser::Style::EasyTree - Parse xml to simple tree
+    XML::Parser::Style::ETree - Parse xml to simple tree
 
 VERSION
-    Version 0.02
+    Version 0.04
 
 SYNOPSIS
         use XML::Parser;
-        my $p = XML::Parser->new( Style => 'EasyTree' );
+        my $p = XML::Parser->new( Style => 'ETree' );
 
 EXAMPLE
         <root at="key">
@@ -76,6 +76,18 @@ SPECIAL VARIABLES
             # will be
             item => { sub => '', #text => 'Test1+Test2' };
 
+    $TEXT{TRIM} [ = 1 ]
+        Trim leading and trailing whitespace from text nodes
+
+            <item>  Test1  <sub />  Test2  </item>
+            # will be
+            item => { sub => '', #text => 'Test1Test2' };
+
+            # with
+            $TEXT{TRIM} = 0;
+            # will be
+            item => { sub => '', #text => '  Test1    Test2  ' };
+
     %FORCE_ARRAY
         Allow to force nodes to be represented always as arrays. If name is
         empty string, then ot means ALL
@@ -126,6 +138,28 @@ SPECIAL VARIABLES
             @STRIP_KEY = (qr/^[^:]+:/);
             # will be
             'item' => { 'sub' => 'Text value' };
+
+SEE ALSO
+    *   XML::Parser
+
+        The parser itself
+
+    *   XML::Parser::EasyTree
+
+        Another EasyTree (I didn't found it before commit because of missing
+        '::Style' in it's name)
+
+        But since we are using same name, we're mutual exclusive ;(
+
+        Maybe I will choose another name in future
+
+    *   XML::Bare
+
+        Very-very fast XML parser. Recommend to look
+
+    *   XML::Hash::LX
+
+        Similar behaviour, same output, but using XML::LibXML
 
 AUTHOR
     Mons Anderson, <mons at cpan.org>
