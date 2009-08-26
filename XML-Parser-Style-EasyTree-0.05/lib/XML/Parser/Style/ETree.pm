@@ -10,11 +10,11 @@ XML::Parser::Style::ETree - Parse xml to simple tree
 
 =head1 VERSION
 
-Version 0.06
+Version 0.05
 
 =cut
 
-our $VERSION = '0.06';
+our $VERSION = '0.05';
 
 
 =head1 SYNOPSIS
@@ -372,11 +372,11 @@ The parser itself
 
 =item * L<XML::Parser::EasyTree>
 
-Another EasyTree (I didn't found it before my first commit of this package because of missing '::Style' in it's name)
+Another EasyTree (I didn't found it before commit because of missing '::Style' in it's name)
 
-But since L<XML::Parser::EasyTree> and L<XML::Parser::Style::EasyTree> use same style name, they're mutual exclusive ;(
+But since we are using same name, we're mutual exclusive ;(
 
-So, all the functionality was moved to ETree, and EasyTree was kept as a compatibility wrapper
+Maybe I will choose another name in future
 
 =item * L<XML::Bare>
 

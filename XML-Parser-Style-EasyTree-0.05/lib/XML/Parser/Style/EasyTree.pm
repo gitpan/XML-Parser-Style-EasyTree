@@ -11,7 +11,7 @@ XML::Parser::Style::EasyTree - Parse xml to simple tree
 
 =head1 VERSION
 
-Version 0.06
+Version 0.05
 
 =head1 PLEASE USE ETREE
 
