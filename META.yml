@@ -18,11 +18,18 @@ meta-spec:
 name: XML-Parser-Style-EasyTree
 no_index:
   directory:
-    - example
     - inc
     - t
+provides:
+  XML::Parser::Style::ETree:
+    file: lib/XML/Parser/Style/ETree.pm
+    version: 0.09
+  XML::Parser::Style::EasyTree:
+    file: lib/XML/Parser/Style/EasyTree.pm
+    version: 0.09
 requires:
   Scalar::Util: 0
+  perl: 5.6.2
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.08
+version: 0.09
